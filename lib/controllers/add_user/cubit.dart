@@ -1,4 +1,5 @@
 import 'package:clinic_mobile/controllers/add_user/states.dart';
+import 'package:clinic_mobile/controllers/home_screen/cubit.dart';
 import 'package:clinic_mobile/shared/network/dio_helper.dart';
 import 'package:clinic_mobile/shared/network/end_points.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class AddUserCubit extends Cubit<AddUserStates> {
         });
   }
 
-  void AddUser(Username,Password,Email,ImageBase64,InerestId){
+  void AddUser(Username,Password,Email,ImageBase64,InerestId,context){
     emit(AddUserLoadingState());
     DioHelper.postData(
         url: ADDUSER,

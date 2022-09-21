@@ -5,6 +5,7 @@ import 'dart:typed_data';
 import 'package:clinic_mobile/controllers/add_note/cubit.dart';
 import 'package:clinic_mobile/controllers/add_user/cubit.dart';
 import 'package:clinic_mobile/controllers/add_user/states.dart';
+import 'package:clinic_mobile/controllers/home_screen/cubit.dart';
 import 'package:clinic_mobile/shared/colors.dart';
 import 'package:clinic_mobile/views/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -77,7 +78,7 @@ class _AddUserScreenState extends State<AddUserScreen> {
               backgroundColor: kPrimary,
               onPressed: () {
                 cubit.AddUser(usernameController.text, passwordController.text,
-                    emailController.text, ImageBase64, selectedItem.id);
+                    emailController.text, ImageBase64, selectedItem.id,context);
               },
               child: Icon(Icons.save),
             ),

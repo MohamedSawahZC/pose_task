@@ -3,6 +3,7 @@ import 'package:clinic_mobile/controllers/home_screen/states.dart';
 import 'package:clinic_mobile/shared/colors.dart';
 import 'package:clinic_mobile/shared/components.dart';
 import 'package:clinic_mobile/views/options_screen.dart';
+import 'package:clinic_mobile/views/other.dart';
 import 'package:clinic_mobile/views/update_note_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -46,7 +47,9 @@ class HomeScreen extends StatelessWidget {
                   icon: Icon(Icons.settings),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    navigate_to(context, OtherScreen());
+                  },
                   icon: Icon(Icons.menu),
                 ),
               ],

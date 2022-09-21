@@ -2,6 +2,7 @@
 import 'package:clinic_mobile/controllers/add_note/cubit.dart';
 import 'package:clinic_mobile/controllers/edit_note/cubit.dart';
 import 'package:clinic_mobile/controllers/home_screen/cubit.dart';
+import 'package:clinic_mobile/controllers/other/cubit.dart';
 import 'package:clinic_mobile/shared/bloc_observer.dart';
 import 'package:clinic_mobile/shared/colors.dart';
 import 'package:clinic_mobile/shared/network/cache_helper.dart';
@@ -50,6 +51,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => OptionsCubit(),
+        ),
+        BlocProvider(
+          create: (context) => OtherCubit(),
         ),
       ],
       child: MaterialApp(

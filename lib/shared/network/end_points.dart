@@ -4,3 +4,5 @@ const UPDATENOTE = 'notes/update';
 const ADDNOTE ='notes/insert';
 const ADDUSER = 'users/insert';
 const GETINTEREST = 'intrests/getall';
+const CLEARNOTES = 'notes/clear';
+const RESETDUMMY ='notes/dummyData';
